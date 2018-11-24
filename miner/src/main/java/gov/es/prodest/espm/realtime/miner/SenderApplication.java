@@ -16,7 +16,6 @@ public class SenderApplication implements ApplicationRunner{
 	@Value("${spring.rabbitmq.queue.transcol.name}")
     private String transcolQueue;
 	
-	
 	@Bean
     public Queue queue() {
         return new Queue(transcolQueue, true);
